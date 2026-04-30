@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f6f7f2;
+    color: #1a1f13;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-forest-600 hover:bg-forest-700 text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+  }
+  .btn-secondary {
+    @apply bg-sage-100 hover:bg-sage-200 text-sage-800 font-medium px-6 py-3 rounded-xl transition-all duration-200 border border-sage-300;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-sage-100 p-6;
+  }
+  .select-field {
+    @apply w-full bg-sage-50 border border-sage-200 text-sage-900 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-forest-400 focus:border-transparent transition-all duration-200 font-body appearance-none cursor-pointer;
+  }
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-bold text-sage-900;
+  }
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f6f7f2; }
+::-webkit-scrollbar-thumb { background: #b5c09f; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a278; }
+
+/* Decorative leaf SVG backgrounds */
+.bg-organic {
+  background-image: radial-gradient(circle at 20% 50%, rgba(34, 197, 94, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(120, 135, 89, 0.08) 0%, transparent 40%),
+                    radial-gradient(circle at 60% 80%, rgba(230, 130, 32, 0.05) 0%, transparent 40%);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #052e16 0%, #14532d 40%, #166534 70%, #1a6e3a 100%);
+}
+
+/* Table styles */
+.data-table {
+  @apply w-full text-sm;
+}
+.data-table th {
+  @apply px-4 py-3 text-left text-xs font-semibold text-sage-600 uppercase tracking-wider bg-sage-50 border-b border-sage-200;
+}
+.data-table td {
+  @apply px-4 py-4 text-sage-800 border-b border-sage-100;
+}
+.data-table tr:hover td {
+  @apply bg-forest-50 transition-colors duration-150;
+}
+.data-table tr:last-child td {
+  @apply border-0;
+}
