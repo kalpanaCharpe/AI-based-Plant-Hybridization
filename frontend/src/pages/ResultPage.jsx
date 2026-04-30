@@ -8,7 +8,7 @@ import { useLocation, useNavigate, Link } from 'react-router-dom'
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 // Change this if your backend runs on a different port
-const API_BASE = import.meta.env.VITE_API_URL || '/api'
+const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api'
 
 const TRAIT_CONFIG = {
   height:       { label: 'Height',            unit: 'cm'   },
